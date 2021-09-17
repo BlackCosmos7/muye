@@ -1,3 +1,7 @@
+fs.readFile
+("tables.csv", {
+    encoding: "utf-8",
+},
 class Person {
     constructor(surname, name, gender, birthdate) {
         this.surname =  surname;
@@ -6,13 +10,12 @@ class Person {
         this.birthdate = birthdate;
     }
 }
+)
+dff
 data.split(';;;;')
 let arr =
 str.split([separator[limit]])
-// let Person = require("fs");
-//    const cb = function() {
-//    console.log("tables.csv");
-// }
+
 
 // let text;
 // Person.readFile("tables.csv", 
