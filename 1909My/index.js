@@ -9,7 +9,20 @@ class Person {
 }
 const nowData = new Date();
 
-
+murrr = require("fs");
+murrr.readFile(`ppl.csv`, {encoding: "utf-8"}, function(err, data){
+    if(err){
+        throw new Error(err)
+    } else {
+        kotiki = kotiki(data)
+        kotiki.sort((a, b) => {
+            return smert(a) - smert(b)
+        })
+        kotiki.forEach(element => {
+            console.log(element.nameinicial)
+        })
+    }
+})
 
 function kotiki(data) {
     let arr =  []
