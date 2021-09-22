@@ -1,22 +1,36 @@
-fs.readFile
-("tables.csv", {
-    encoding: "utf-8",
-},
 class Person {
     constructor(surname, name, gender, birthdate) {
-        this.surname =  surname;
-        this.name = name;
-        this.gender = gender;
-        this.birthdate = birthdate;
+    this.nameinicial = name.charAt(0) + ". " + surname;
+    this.surname =  surname;
+    this.name = name;
+    this.gender = gender;
+    this.birthdate = birthdate;
     }
 }
-)
-dff
-data.split(';;;;')
-let arr =
-str.split([separator[limit]])
+const nowData = new Date();
 
 
-// let text;
-// Person.readFile("tables.csv", 
-// { encoding: "utf-8"}, cb); 
+
+function kotiki(data) {
+    let arr =  []
+    let cat = data.split("\n")
+    cat.shift()
+    for(i of cat) {
+        line = i.split(";");
+        let kit = new Person(line[0], line[1], line[2], line[3]);
+        arr.push(kit);
+    }
+return arr
+}
+
+function smert(element){
+    let birth = new Date(element.birthdate);
+    let year =  nowData.getFullYear();
+    birth.setFullYear( year); 
+    if (birth < nowData){
+        year += 1 
+        birth.setFullYear( year)
+    }
+    var bolRazn = birth - nowData;
+    return bolRazn 
+}
